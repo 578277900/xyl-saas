@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="header">
+    <view class="avatar">{{ info.name[0] }}</view>
+    <view class="name">{{ info.name }}</view>
+    <view class="class">{{ info.enrollmentYear }}级 {{ info.department }} {{ info.major }}</view>
+  </view>
+
+  <van-cell-group title="基本信息">
+    <van-cell title="性别" value="{{ info.gender === 1 ? '男' : (info.gender === 2 ? '女' : '未知') }}" />
+    <van-cell title="班级" value="{{ info.className }}" />
+    <van-cell title="学号" value="{{ info.studentId }}" />
+  </van-cell-group>
+
+  <van-cell-group title="职业信息">
+    <van-cell title="所在城市" value="{{ info.city }}" />
+    <van-cell title="工作单位" value="{{ info.company }}" />
+    <van-cell title="职位" value="{{ info.position }}" />
+  </van-cell-group>
+
+  <van-cell-group title="联系方式">
+    <van-cell title="手机号" value="{{ info.phone }}" is-link bind:click="makeCall" wx:if="{{ info.phone }}"/>
+    <van-cell title="邮箱" value="{{ info.email }}" />
+  </van-cell-group>
+</view>

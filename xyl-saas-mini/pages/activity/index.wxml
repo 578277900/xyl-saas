@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="activity-list">
+    <block wx:for="{{ activities }}" wx:key="id">
+      <view class="activity-card" bindtap="viewDetail" data-id="{{item.id}}">
+        <image class="cover" src="{{item.cover || 'https://via.placeholder.com/300x150?text=Activity'}}" mode="aspectFill"></image>
+        <view class="content">
+          <view class="title">{{ item.title }}</view>
+          <view class="info-row">
+            <text class="time">时间：{{ item.startTimeStr }}</text>
+          </view>
+          <view class="info-row">
+            <text class="location">地点：{{ item.location }}</text>
+          </view>
+          <view class="status-row">
+             <van-tag type="{{ item.status === 1 ? 'success' : (item.status === 2 ? 'warning' : 'default') }}">
+               {{ item.statusText }}
+             </van-tag>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{ activities.length === 0 }}" class="empty-tip">
+      暂无活动信息
+    </view>
+  </view>
+</view>

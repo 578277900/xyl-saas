@@ -1,0 +1,39 @@
+.container {
+  min-height: 100vh;
+  background-color: #f7f8fa;
+  padding-bottom: 20px;
+}
+
+.header {
+  background-color: #c62f2f;
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #c62f2f;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.class {
+  font-size: 14px;
+  opacity: 0.8;
+}

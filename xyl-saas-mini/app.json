@@ -1,12 +1,40 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/alumni/index",
+    "pages/alumni/detail",
+    "pages/activity/index",
+    "pages/activity/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "校友录SaaS",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#c62f2f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/activity/index",
+        "text": "活动",
+        "iconPath": "images/activity.png",
+        "selectedIconPath": "images/activity-active.png"
+      },
+      {
+        "pagePath": "pages/alumni/index",
+        "text": "校友",
+        "iconPath": "images/alumni.png",
+        "selectedIconPath": "images/alumni-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -6,6 +6,7 @@ const { connectDB } = require('./config/db');
 const tenantRoutes = require('./routes/tenant');
 const authRoutes = require('./routes/auth');
 const alumniRoutes = require('./routes/alumni');
+const activityRoutes = require('./routes/activity');
 require('dotenv').config();
 
 const app = new Koa();
@@ -28,6 +29,7 @@ app.use(router.routes()).use(router.allowedMethods());
 app.use(tenantRoutes.routes()).use(tenantRoutes.allowedMethods());
 app.use(authRoutes.routes()).use(authRoutes.allowedMethods());
 app.use(alumniRoutes.routes()).use(alumniRoutes.allowedMethods());
+app.use(activityRoutes.routes()).use(activityRoutes.allowedMethods());
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

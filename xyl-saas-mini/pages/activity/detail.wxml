@@ -1,0 +1,33 @@
+<view class="container">
+  <image class="cover" src="{{ activity.cover || 'https://via.placeholder.com/300x150?text=Activity' }}" mode="widthFix"></image>
+  
+  <view class="content">
+    <view class="title">{{ activity.title }}</view>
+    
+    <view class="info-section">
+      <view class="info-item">
+        <text class="label">时间：</text>
+        <text class="value">{{ activity.startTimeStr }}</text>
+      </view>
+      <view class="info-item">
+        <text class="label">地点：</text>
+        <text class="value">{{ activity.location }}</text>
+      </view>
+      <view class="info-item">
+        <text class="label">人数：</text>
+        <text class="value">{{ activity.maxParticipants > 0 ? activity.maxParticipants : '不限' }}</text>
+      </view>
+    </view>
+
+    <view class="desc-section">
+      <view class="section-title">活动详情</view>
+      <text class="desc-text">{{ activity.content }}</text>
+    </view>
+  </view>
+
+  <view class="footer">
+    <van-button type="primary" block bind:click="onSignup" disabled="{{ activity.status !== 1 }}">
+      {{ activity.status === 1 ? '立即报名' : '活动已结束' }}
+    </van-button>
+  </view>
+</view>

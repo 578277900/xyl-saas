@@ -1,0 +1,53 @@
+.container {
+  padding: 10px;
+  background-color: #f7f8fa;
+  min-height: 100vh;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activity-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.cover {
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+}
+
+.content {
+  padding: 15px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info-row {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.status-row {
+  margin-top: 10px;
+}
+
+.empty-tip {
+  text-align: center;
+  color: #999;
+  margin-top: 50px;
+}
